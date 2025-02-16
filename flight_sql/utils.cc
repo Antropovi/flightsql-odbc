@@ -157,6 +157,8 @@ CDataType ConvertCDataTypeFromV2ToV3(int16_t data_type_v2) {
   switch (data_type_v2) {
     case -6: // Same as SQL_C_TINYINT from sqlext.h
       return CDataType_STINYINT;
+    case 2:
+      return CDataType_DOUBLE;
     case 4: // Same as SQL_C_LONG from sqlext.h
       return CDataType_SLONG;
     case 5: // Same as SQL_C_SHORT from sqlext.h
